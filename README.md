@@ -8,4 +8,4 @@ This dotfiles repository is designed to be used with [GNU Stow](https://www.gnu.
 
 To install the dotfiles for a particular package, run the following command from the `.dotfiles` directory:
 
-    `stow -S <directory>`
+    stow -S <directory>
