@@ -59,9 +59,10 @@ endif
 if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin()
     "Plug 'gruvbox-community/gruvbox'
-    Plug 'fatih/vim-go', { 'do': 'GoInstallBinaries' }
-    Plug 'rstacruz/vim-closer'
     Plug 'dense-analysis/ale'
+    Plug 'fatih/vim-go', { 'do': 'GoInstallBinaries' }
+    Plug 'preservim/nerdtree'
+    Plug 'rstacruz/vim-closer'
   call plug#end()
 
   " golang options
@@ -81,6 +82,9 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   let g:go_highlight_diagnostic_errors = 1
   let g:go_highlight_diagnostic_warnings = 1
   let g:go_auto_sameids = 0
+
+  " map keyboard shortcut for NerdTree
+  nnoremap <C-z> :NERDTreeToggle<CR>
 
 endif
 
