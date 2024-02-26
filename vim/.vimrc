@@ -14,6 +14,7 @@ set smarttab
 set shiftwidth=4
 set wrap            " Wrap text at edge of window
 set linebreak       " Don't wrap in middle of a word
+set scrolloff=10    " 10 lines above and below when scrolling
 
 " Highlight search results
 set hlsearch
