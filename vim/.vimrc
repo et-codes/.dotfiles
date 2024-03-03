@@ -1,3 +1,5 @@
+let mapleader = " " " set leader key to space
+
 set autoindent      " indent new lines
 set noflash
 set expandtab       " replace tabs with spaces
@@ -64,6 +66,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'fatih/vim-go', { 'do': 'GoInstallBinaries' }
     Plug 'preservim/nerdtree'
     Plug 'rstacruz/vim-closer'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install()  } }
+    Plug 'junegunn/fzf.vim'
   call plug#end()
 
   " golang options
@@ -86,6 +90,11 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 
   " map keyboard shortcut for NerdTree
   nnoremap <C-z> :NERDTreeToggle<CR>
+
+  " NOTE: install FZF and ripgrep before using this
+  " map keyboard shortcuts for FZF
+  nnoremap <C-f> :Files<CR>
+  nnoremap <Leader>f :Rg<CR>
 
 endif
 
