@@ -116,7 +116,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Kubectl configuration
+alias k='kubectl'
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
+
 # pipx configuration
 # Created by `pipx` on 2024-02-27 18:24:09
 export PATH="$PATH:/home/eric/.local/bin"
 eval "$(register-python-argcomplete3 pipx)"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/eric/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
