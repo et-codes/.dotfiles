@@ -115,14 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# kubectl
-
-alias k='kubectl'
-source <(kubectl completion bash)
-complete -o default -F __start_kubectl k # make completions work with 'k'
-
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/eric/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

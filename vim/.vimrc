@@ -3,23 +3,20 @@ let mapleader = " " " set leader key to space
 set autoindent      " indent new lines
 set noflash
 set expandtab       " replace tabs with spaces
-set tabstop=2       " number of spaces to replace tab with
+set tabstop=4       " number of spaces to replace tab with
 set noignorecase    " don't ignore case in search
 set autowrite       " write files when changing with multiple files open
 set nonumber        " no line numbers
 set norelativenumber
 set showmode        " show command and insert mode
 set t_vb=           " disable visual bell
-set softtabstop=2
+set softtabstop=4
 set smartindent
 set smarttab
-set shiftwidth=2
+set shiftwidth=4
 set wrap            " Wrap text at edge of window
 set linebreak       " Don't wrap in middle of a word
 set scrolloff=10    " 10 lines above and below when scrolling
-
-" Turn on syntax highlighting
-syntax on
 
 " Highlight search results
 set hlsearch
@@ -44,14 +41,22 @@ set hidden
 " command history
 se history=100
 
+" here because plugins and stuff need it
+if has("syntax")
+  syntax enable
+endif
+
 " faster scrolling
 set ttyfast
 
 " allow sensing the filetype
 filetype plugin on
 
-" Set backspace so it works more intuitively
-set backspace=indent,eol,start
+" requires PLATFORM env variable set (in ~/.bashrc)
+if $PLATFORM == 'mac'
+  " required for mac delete to work
+  set backspace=indent,eol,start
+endif
 
 " Load plugins if Plug is installed
 if filereadable(expand("~/.vim/autoload/plug.vim"))
