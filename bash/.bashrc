@@ -64,6 +64,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# fzf fuzzy completion
+eval "$(fzf --bash)"
+
 # Kubectl configuration
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
