@@ -11,6 +11,9 @@ fi
 # Run .bashrc
 source ~/.bashrc
 
+# Aliases
+alias ic="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/eric/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

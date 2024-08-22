@@ -3,17 +3,17 @@ let mapleader = " " " set leader key to space
 set autoindent      " indent new lines
 set noflash
 set expandtab       " replace tabs with spaces
-set tabstop=2       " number of spaces to replace tab with
+set tabstop=4       " number of spaces to replace tab with
 set noignorecase    " don't ignore case in search
 set autowrite       " write files when changing with multiple files open
 set nonumber        " no line numbers
 set norelativenumber " no relative line numbers
 set showmode        " show command and insert mode
 set t_vb=           " disable visual bell
-set softtabstop=2
+set softtabstop=4
 set smartindent
 set smarttab
-set shiftwidth=2
+set shiftwidth=4
 set wrap            " Wrap text at edge of window
 set linebreak       " Don't wrap in middle of a word
 set scrolloff=10    " 10 lines above and below when scrolling
